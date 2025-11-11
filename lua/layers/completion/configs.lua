@@ -195,7 +195,8 @@ function configs.cmp()
         vim_item.menu = vim_item.kind
         vim_item.kind = icons_[vim_item.kind]
 
-        vim_item = require('tailwind-tools.cmp').lspkind_format(idx, vim_item)
+        -- Tailwind tools disabled due to lspconfig deprecation issues
+        -- vim_item = require('tailwind-tools.cmp').lspkind_format(idx, vim_item)
 
         return vim_item
       end,
