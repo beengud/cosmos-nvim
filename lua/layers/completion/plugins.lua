@@ -49,6 +49,7 @@ cosmos.add_plugin('dmitmel/cmp-cmdline-history', { dependencies = { 'hrsh7th/nvi
 cosmos.add_plugin('saadparwaiz1/cmp_luasnip', { dependencies = { 'hrsh7th/nvim-cmp' }, event = 'BufRead' })
 
 cosmos.add_plugin('jackMort/ChatGPT.nvim', {
+  enabled = false, -- Disabled: requires OPENAI_API_KEY
   event = 'VeryLazy',
   config = configs.chatgpt,
   dependencies = {

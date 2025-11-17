@@ -121,6 +121,7 @@ cosmos.add_plugin('tzachar/highlight-undo.nvim', {
 })
 
 cosmos.add_plugin('luckasRanarison/tailwind-tools.nvim', {
+  enabled = false, -- Disabled: uses deprecated lspconfig API (conflicts with nvim 0.11+)
   dependencies = { 'nvim-treesitter/nvim-treesitter' },
   opts = {},
 })
