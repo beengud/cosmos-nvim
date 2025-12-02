@@ -1,18 +1,18 @@
 local cosmos = require('core.cosmos')
 local configs = require('layers.completion.configs')
 
-cosmos.add_plugin('zbirenbaum/copilot.lua', {
-  enabled = true,
-  cmd = 'Copilot',
-  event = 'InsertEnter',
-  config = function()
-    require('copilot').setup({
-      suggestion = {
-        auto_trigger = false,
-      },
-    })
-  end,
-})
+-- cosmos.add_plugin('zbirenbaum/copilot.lua', {
+--   enabled = true,
+--   cmd = 'Copilot',
+--   event = 'InsertEnter',
+--   config = function()
+--     require('copilot').setup({
+--       suggestion = {
+--         auto_trigger = false,
+--       },
+--     })
+--   end,
+-- })
 
 cosmos.add_plugin('hrsh7th/nvim-cmp', {
   dependencies = {
@@ -48,17 +48,17 @@ cosmos.add_plugin('dmitmel/cmp-cmdline-history', { dependencies = { 'hrsh7th/nvi
 
 cosmos.add_plugin('saadparwaiz1/cmp_luasnip', { dependencies = { 'hrsh7th/nvim-cmp' }, event = 'BufRead' })
 
-cosmos.add_plugin('jackMort/ChatGPT.nvim', {
-  enabled = false, -- Disabled: requires OPENAI_API_KEY
-  event = 'VeryLazy',
-  config = configs.chatgpt,
-  dependencies = {
-    'MunifTanjim/nui.nvim',
-    'nvim-lua/plenary.nvim',
-    'folke/trouble.nvim',
-    'nvim-telescope/telescope.nvim',
-  },
-})
+-- cosmos.add_plugin('jackMort/ChatGPT.nvim', {
+--   enabled = false, -- Disabled: requires OPENAI_API_KEY
+--   event = 'VeryLazy',
+--   config = configs.chatgpt,
+--   dependencies = {
+--     'MunifTanjim/nui.nvim',
+--     'nvim-lua/plenary.nvim',
+--     'folke/trouble.nvim',
+--     'nvim-telescope/telescope.nvim',
+--   },
+-- })
 
 local local_codecompanion_dir = os.getenv('HOME') .. '/workspace/projects/codecompanion.nvim'
 local local_codecompanion_dir_exists = vim.fn.isdirectory(local_codecompanion_dir) == 1
@@ -138,18 +138,18 @@ cosmos.add_plugin('sourcegraph/amp.nvim', {
   end,
 })
 
-cosmos.add_plugin('CopilotC-Nvim/CopilotChat.nvim', {
-  enabled = true,
-  branch = 'main',
-  dependencies = {
-    { 'zbirenbaum/copilot.lua' }, -- or zbirenbaum/copilot.lua
-    { 'nvim-lua/plenary.nvim' }, -- for curl, log wrapper
-  },
-  build = 'make tiktoken', -- Only on MacOS or Linux
-  opts = {
-    -- See Configuration section for options
-  },
-})
+-- cosmos.add_plugin('CopilotC-Nvim/CopilotChat.nvim', {
+--   enabled = true,
+--   branch = 'main',
+--   dependencies = {
+--     { 'zbirenbaum/copilot.lua' }, -- or zbirenbaum/copilot.lua
+--     { 'nvim-lua/plenary.nvim' }, -- for curl, log wrapper
+--   },
+--   build = 'make tiktoken', -- Only on MacOS or Linux
+--   opts = {
+--     -- See Configuration section for options
+--   },
+-- })
 
 local local_avante_dir = os.getenv('HOME') .. '/workspace/projects/avante.nvim'
 local local_avante_dir_exists = vim.fn.isdirectory(local_avante_dir) == 1
