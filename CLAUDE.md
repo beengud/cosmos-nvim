@@ -6,6 +6,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 This is a Neovim configuration called **cosmos-nvim**, a Spacemacs-inspired setup with a layer-based architecture. It provides a VSCode-like experience with Spacemacs keybindings and Vim text objects. The leader key is the spacebar.
 
+
+
 **Repository Fork Chain**:
 - Original: https://github.com/yetone/cosmos-nvim
 - MacBook M3: https://github.com/beengud/cosmos-nvim
